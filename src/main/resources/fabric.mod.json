@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "id": "eternalpotioneffects",
+  "version": "${version}",
+
+  "name": "Eternal Potion Effects Mod",
+  "description": "Eternal Potion Effects is a Minecraft mod that grants infinite specified potion effects when holding designated items, with the ability to customize items and effects through a configuration file",
+  "authors": [
+    "MCTeamPotato",
+    "Awei"
+  ],
+  "contact": {
+    "homepage": "https://github.com/MCTeamPotato/",
+    "sources": "https://github.com/MCTeamPotato/EternalPotionEffects"
+  },
+
+  "license": "GPLV3",
+  "icon": "assets/eternalpotioneffects/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "team.teampotato.EternalPotionEffects.EternalPotionEffects",
+      "team.teampotato.EternalPotionEffects.Event.InventoryEvent",
+      "team.teampotato.EternalPotionEffects.Event.ItemEvent",
+      "team.teampotato.EternalPotionEffects.common.Config",
+      "team.teampotato.EternalPotionEffects.common.MarkdownGenerator"
+    ]
+  },
+  "mixins": [
+    "EternalPotionEffects.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.13.3",
+    "fabric": "*",
+    "minecraft": ">=1.19.3",
+    "java": ">=17"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
